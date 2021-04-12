@@ -14,3 +14,54 @@ https://github.com/thewhitesoft/student-2021-assignment#destutroms-secrets
 Таким образом было принято решение выполнять задание следующим образом: 
 
 Файлы одинаковы если данные одного типа (оба файла или обе директории); имена и содержимое совпадает. Выполнять условие по манипуляции с папками и файлами исходя из пункта со звёздочкой. 
+
+#Работа с программой
+
+Чтобы запустить, нужно воспользоваться командой "java -jar TheWhite3.jar", в аргументах -src и -dest указать папки с входными и папку для выходных данных. При указании относительных путей необходимо переместить файл TheWhite3.jar в нужную директорию. 
+Пример работы: 
+
+```
+java -jar TheWhite.jar -scr ".\\srcc\\Utrom's secrets" -dest "D:/folder"
+```
+Выходные данные:
+```
+Исходная директория
+.\srcc\Utrom's secrets
+	|- Research 5e5ce901-b486-49e1-848a-a8134a791374/
+		|- finded.secret 75Kb
+	|- Research fe2fbaed-9a7f-4f9a-b430-e089a9771c95/
+		|- finded.secret 70Kb
+	|- Secret data 047f1762-d6f4-4f41-9ee3-9dfacf2575ec/
+		|- middle.secret 30Kb
+		|- top.secret 500Kb
+	|- Secret data cdd8d173-61d9-4eaa-a827-61ebd75ce7da/
+		|- middle.secret 30Kb
+	|- Share ba8ad6f4-0194-4e0c-b825-78582720bba3/
+		|- shared.secret 45Kb
+	|- Share e1106238-d0f3-4902-9478-f012b87ce2a8/
+		|- shared.secret 45Kb
+	|- Total secret 86b5d8c6-5b6c-493f-b626-b7b506900687/
+		|- total.secret 17Kb
+	|- Escape 5e5ce901-b486-49e1-848a-a8134a791374.plan 56Kb
+	|- Win e4e31179-1e60-46d5-a868-fbb709789e07.plan 25Kb
+	|- Win f51a1b8a-1519-4ac0-b432-00d6d9001400.plan 256Kb
+D:\folder
+	|- Research/
+		|- finded.secret 75Kb
+	|- Research (1)/
+		|- finded.secret 70Kb
+	|- Secret data/
+		|- middle.secret 30Kb
+		|- top.secret 500Kb
+	|- Secret data (1)/
+		|- middle.secret 30Kb
+	|- Share/
+		|- shared.secret 45Kb
+	|- Total secret/
+		|- total.secret 17Kb
+	|- Escape.plan 56Kb
+	|- Win (1).plan 25Kb
+	|- Win.plan 256Kb
+
+Process finished with exit code 0
+```

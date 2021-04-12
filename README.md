@@ -45,7 +45,7 @@ java -jar TheWhite.jar -scr ".\\srcc\\Utrom's secrets" -dest "D:/folder"
 	|- Escape 5e5ce901-b486-49e1-848a-a8134a791374.plan 56Kb
 	|- Win e4e31179-1e60-46d5-a868-fbb709789e07.plan 25Kb
 	|- Win f51a1b8a-1519-4ac0-b432-00d6d9001400.plan 256Kb
-D:\folder
+D:\folder\Utrom's secrets.zip
 	|- Research/
 		|- finded.secret 75Kb
 	|- Research (1)/
@@ -62,6 +62,9 @@ D:\folder
 	|- Escape.plan 56Kb
 	|- Win (1).plan 25Kb
 	|- Win.plan 256Kb
+
+Process finished with exit code 0
+
 
 Process finished with exit code 0
 ```

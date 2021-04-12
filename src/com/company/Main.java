@@ -26,7 +26,7 @@ public class Main {
         if (dest.exists())deleteAllExceptNeed(dest, "!");
         dest.mkdirs();
         System.out.println("Исходная директория");
-        tree(path);
+        tree(path,"");
 
         //Map<String, Set<Ffile>> equalFiles = new HashMap<>();
         //Map<String, Set<Dir>> equalDirs = new HashMap<>();
@@ -105,7 +105,7 @@ public class Main {
             }
         }
 
-        tree(dest);
+        tree(dest,path.getName() + ".zip");
 
         try {
             toZip(dest.getPath(), path.getName() + ".zip");
@@ -153,8 +153,11 @@ public class Main {
 
 
     //метод для печати дерева директории (специализированно для 1 уровня вложенности + размер файла == содержимое)
-    static void tree(File dir) {
+    static void tree(File dir, String name) {
+        if (name.isEmpty())
         System.out.println(dir.getPath());
+        else
+            System.out.println(dir.getPath() + "\\" + name);
         ArrayList<File> dirs = new ArrayList<>();
         ArrayList<File> files = new ArrayList<>();
         for (File file : Objects.requireNonNull(dir.listFiles())) {

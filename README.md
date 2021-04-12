@@ -23,7 +23,7 @@ https://github.com/thewhitesoft/student-2021-assignment#destutroms-secrets
 ```
 java -jar TheWhite.jar -scr ".\\srcc\\Utrom's secrets" -dest "D:/folder"
 ```
-Выходные данные:
+Работа программы:
 ```
 Исходная директория
 .\srcc\Utrom's secrets

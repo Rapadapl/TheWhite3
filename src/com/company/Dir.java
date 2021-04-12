@@ -50,7 +50,7 @@ public class Dir implements Comparable<Dir> {
         for (File f : Objects.requireNonNull(file.listFiles())) {
             files.add(new Ffile(f));
         }
-        for (Ffile f : files){
+        for (Ffile f : files) {
             size += f.getSize();
         }
     }
@@ -62,6 +62,7 @@ public class Dir implements Comparable<Dir> {
         this.uuid = uuid;
         this.size = size;
     }
+
     //перегружаем функцию equals для соответсвия заданию
     @Override
     public boolean equals(Object o) {

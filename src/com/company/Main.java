@@ -15,18 +15,18 @@ public class Main {
     public static void main(String[] args) {
 
         var str = Arrays.asList(args).indexOf("-scr");
-        String input = args[str+1];
+        String input = args[str + 1];
         str = Arrays.asList(args).indexOf("-dest");
-        String output = args[str+1];
+        String output = args[str + 1];
 
         ArrayList<Ffile> files = new ArrayList<>();
         ArrayList<Dir> dirs = new ArrayList<>();
         File path = new File(input);
         File dest = new File(output);
-        if (dest.exists())deleteAllExceptNeed(dest, "!");
+        if (dest.exists()) deleteAllExceptNeed(dest, "!");
         dest.mkdirs();
         System.out.println("Исходная директория");
-        tree(path,"");
+        tree(path, "");
 
         //Map<String, Set<Ffile>> equalFiles = new HashMap<>();
         //Map<String, Set<Dir>> equalDirs = new HashMap<>();
@@ -105,7 +105,7 @@ public class Main {
             }
         }
 
-        tree(dest,path.getName() + ".zip");
+        tree(dest, path.getName() + ".zip");
 
         try {
             toZip(dest.getPath(), path.getName() + ".zip");
@@ -127,7 +127,8 @@ public class Main {
             destination.transferFrom(source, 0, source.size());
         }
     }
-//функция для создания зип архива из файлов папке, после отработки удаляет все файлы из папки, кроме архива
+
+    //функция для создания зип архива из файлов папке, после отработки удаляет все файлы из папки, кроме архива
     static void toZip(String dir, String name) throws IOException {
 
         Path p = Files.createFile(Paths.get(dir + "\\" + name));
@@ -155,7 +156,7 @@ public class Main {
     //метод для печати дерева директории (специализированно для 1 уровня вложенности + размер файла == содержимое)
     static void tree(File dir, String name) {
         if (name.isEmpty())
-        System.out.println(dir.getPath());
+            System.out.println(dir.getPath());
         else
             System.out.println(dir.getPath() + "\\" + name);
         ArrayList<File> dirs = new ArrayList<>();
@@ -194,23 +195,22 @@ public class Main {
             }
             System.out.println("\t|- " + file.getName() + " " + data);
         }
-   }
+    }
 
 
-//удаление всех файлов, кроме с указанным расширением. Для удаления всех можно указать любой служебный символ,
+    //удаление всех файлов, кроме с указанным расширением. Для удаления всех можно указать любой служебный символ,
 //также специализирована на 1 уровень вложенности
     static void deleteAllExceptNeed(File dir, String end) {
 
         File[] files = dir.listFiles();
-        for(var f : files){
+        for (var f : files) {
 
-            if(f.isDirectory()){
+            if (f.isDirectory()) {
                 for (var ff : f.listFiles()) {
                     ff.delete();
                 }
-               f.delete();
-            }
-            else {
+                f.delete();
+            } else {
                 if (!f.getName().endsWith(end)) {
 
                     f.delete();

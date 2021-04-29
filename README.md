@@ -65,6 +65,4 @@ D:\folder\Utrom's secrets.zip
 
 Process finished with exit code 0
 
-
-Process finished with exit code 0
 ```
